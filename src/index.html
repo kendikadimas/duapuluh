@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAPPY BIRTHDAY!</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="./output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <section class="h-screen bg-[#D4EBF8]">
+        <div class="flex flex-col sm:flex-row justify-between bg-[#D4EBF8] px-6 sm:px-10 py-6 sm:py-10">
+            <h1 class="text-3xl sm:text-5xl font-bold underline text-center sm:text-left mb-4 sm:mb-0">
+                TODAY IS THE DAY!
+            </h1>
+            <h1 class="text-3xl sm:text-5xl font-bold text-center sm:text-right">
+                20
+            </h1>
+        </div>
+        <section class="bg-[#D4EBF8]">
+            <div class="flex justify-center">
+                <a href="#happy" id="confetti-trigger" class="transition-transform transform hover:scale-105">
+                    <img src="5449100.webp" alt="Happy Illustration" class="w-full max-w-[500px] sm:max-w-[700px] h-auto">
+                </a>
+            </div>
+        </section>
+        <div class="px-6 sm:px-10 bg-[#D4EBF8] mt-4">
+            <h1 class="text-3xl sm:text-5xl font-bold flex justify-center sm:justify-end">
+                JAN 26th
+            </h1>
+        </div>
+    </section>
+
+    <!-- Section Happy -->
+    <section class="flex flex-col sm:flex-row h-screen bg-[#1F509A] items-center px-6 sm:px-16 gap-6 sm:gap-8 w-full" id="happy">
+        <div class="w-full sm:w-1/2">
+            <div class="flex items-center justify-center bg-[#D4EBF8] p-4 rounded-lg w-fit m-auto">
+                <img src="sellyft1.jpg" alt="Selamat Datang" class="rounded-md h-[300px] sm:h-[500px] w-full object-cover">
+            </div>
+        </div>
+        <div class="text-white w-full sm:w-1/2 text-center sm:text-left">
+            <h2 class="text-3xl sm:text-5xl font-bold mb-4">
+                Selamat Datang di DUA PULUH, ALYA!
+            </h2>
+            <p class="text-base sm:text-lg leading-relaxed">
+                Happy birthday sayang, semoga ditahun keduapuluh ini kamu diberi semua kemudahan, kesehatan dan rejeki yang banyak yaa. 
+                Semoga akademiknya makin lancar, makin jago, makin aktif organisasi wkwk, dan bisa dapet tempat magang yang bagus hehe.
+                <br><br>
+                I'm very proud of you! Of all the problems you face, you made it this far.
+            </p>
+            <br>
+            <a href="#gallery" class="inline-block bg-white text-[#1F509A] px-4 py-2 rounded-lg mt-4">
+                Liat Fotomu!
+            </a>
+        </div>
+    </section>
+
+    <!-- Section Gallery -->
+    <section id="gallery" class="bg-[#D4EBF8] px-6 sm:px-10 py-10">
+        <h1 class="text-3xl sm:text-5xl font-bold mb-8 text-center sm:text-left">Kamu</h1>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+            <!-- Cards -->
+            <div class="bg-white rounded-lg shadow-md hover:shadow-lg overflow-hidden">
+                <img src="sellysea1.jpg" alt="Gallery Image" class="w-full h-[200px] sm:h-[300px] object-cover">
+            </div>
+            <div class="bg-white rounded-lg shadow-md hover:shadow-lg overflow-hidden">
+                <img src="sellyft2.jpg" alt="Gallery Image" class="w-full h-[200px] sm:h-[300px] object-cover">
+            </div>
+            <div class="bg-white rounded-lg shadow-md hover:shadow-lg overflow-hidden">
+                <img src="sellymiror1.jpg" alt="Gallery Image" class="w-full h-[200px] sm:h-[300px] object-cover">
+            </div>
+            <div class="bg-white rounded-lg shadow-md hover:shadow-lg overflow-hidden">
+                <img src="waterfall1.jpg" alt="Gallery Image" class="w-full h-[200px] sm:h-[300px] object-cover">
+            </div>
+            <div class="bg-white rounded-lg shadow-md hover:shadow-lg overflow-hidden">
+                <img src="seaclp2.jpg" alt="Gallery Image" class="w-full h-[200px] sm:h-[300px] object-cover">
+            </div>
+            <div class="bg-white rounded-lg shadow-md hover:shadow-lg overflow-hidden">
+                <img src="watr1.jpg" alt="Gallery Image" class="w-full h-[200px] sm:h-[300px] object-cover">
+            </div>
+            <div class="bg-white rounded-lg shadow-md hover:shadow-lg overflow-hidden">
+                <img src="cf.jpg" alt="Gallery Image" class="w-full h-[200px] sm:h-[300px] object-cover">
+            </div>
+            <div class="bg-white rounded-lg shadow-md hover:shadow-lg overflow-hidden">
+                <img src="lustrum.jpg" alt="Gallery Image" class="w-full h-[200px] sm:h-[300px] object-cover">
+            </div>
+        </div>
+    </section>
+    <script>
+        document.getElementById('confetti-trigger').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default anchor behavior
+
+            // Trigger confetti
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+
+            // Redirect to the "happy" section after a slight delay
+            setTimeout(() => {
+                document.getElementById('happy').scrollIntoView({ behavior: 'smooth' });
+            }, 100); // Delay in milliseconds
+        });
+    </script>
+</body>
+</html>
